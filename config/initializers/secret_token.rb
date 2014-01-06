@@ -20,9 +20,8 @@ def secure_token
     # Generate a new token and store it in token_file.
     token = SecureRandom.hex(64)
     File.write(token_file, token)
+    token
   end
-  
 end
-
-FirstApp::Application.config.secret_key_base = secure_token 
-#'36572a09a753cb2c67e5d6ef6ee49c0f3507901749c2ce674117c402b8dbdc832726dba490f4b9b61a8c51d7ed581b916e71450a4ea6904cf1fff79711b4f54e'
+FirstApp::Application.config.secret_key_base = secure_token
+#FirstApp::Application.config.secret_key_base = '36572a09a753cb2c67e5d6ef6ee49c0f3507901749c2ce674117c402b8dbdc832726dba490f4b9b61a8c51d7ed581b916e71450a4ea6904cf1fff79711b4f54e'
