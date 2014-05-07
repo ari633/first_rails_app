@@ -39,3 +39,6 @@ pickle-email-*.html
 config/initializers/secret_token.rb
 >>>>>>> edd41e927eb05e153eb76736772b4c8b04a92330
 /nbproject/private/
+/nbproject/project.properties
+/nbproject/project.xml
+
