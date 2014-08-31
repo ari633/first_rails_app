@@ -7,12 +7,11 @@ FirstApp::Application.routes.draw do
   match '/signout',  to: 'sessions#destroy', via: 'get'
   match '/help', to: 'static_pages#help', via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
-  match '/contact', to: 'static_pages#contact', via: 'get'
-  
-  resources :microposts
+  match '/contact', to: 'static_pages#contact', via: 'get'  
+
 
   resources :users
-
+  resources :microposts, only: [:create, :destroy]
   resources :sessions, only: [:new, :create, :destroy]
   
   # The priority is based upon order of creation: first created -> highest priority.
